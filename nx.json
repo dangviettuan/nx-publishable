@@ -17,6 +17,9 @@
   },
   "projects": {
     "publishable": { "tags": [] },
-    "publishable-e2e": { "tags": [], "implicitDependencies": ["publishable"] }
+    "publishable-e2e": { "tags": [], "implicitDependencies": ["publishable"] },
+    "capitalize": { "tags": [] },
+    "button": { "tags": [] },
+    "button-showcase": { "tags": [] }
   }
 }

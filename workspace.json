@@ -108,6 +108,108 @@
           }
         }
       }
+    },
+    "capitalize": {
+      "root": "libs/capitalize",
+      "sourceRoot": "libs/capitalize/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/capitalize/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/capitalize"
+          ],
+          "options": {
+            "jestConfig": "libs/capitalize/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "button": {
+      "root": "libs/button",
+      "sourceRoot": "libs/button/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/button/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/button"
+          ],
+          "options": {
+            "jestConfig": "libs/button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "button-showcase": {
+      "root": "libs/button-showcase",
+      "sourceRoot": "libs/button-showcase/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/button-showcase/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/button-showcase",
+            "tsConfig": "libs/button-showcase/tsconfig.lib.json",
+            "project": "libs/button-showcase/package.json",
+            "entryFile": "libs/button-showcase/src/index.ts",
+            "external": [
+              "react",
+              "react-dom",
+              "react-is",
+              "styled-components"
+            ],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/button-showcase"
+          ],
+          "options": {
+            "jestConfig": "libs/button-showcase/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

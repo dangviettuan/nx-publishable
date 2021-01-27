@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
+import { ButtonShowcase } from '@publisable/button-showcase';
 
 const StyledApp = styled.div`
   font-family: sans-serif;
@@ -137,6 +138,7 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
+      <ButtonShowcase />
       <header className="flex">
         <Logo width="75" height="75" />
         <h1>Welcome to publishable!</h1>

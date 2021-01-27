@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@publishable/capitalize": ["libs/capitalize/src/index.ts"],
+      "@publishable/button": ["libs/button/src/index.ts"],
+      "@publisable/button-showcase": ["libs/button-showcase/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
